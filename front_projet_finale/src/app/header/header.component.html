@@ -1,0 +1,36 @@
+<div class="container-fluid position-relative p-0">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+           
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <div class="dropdown">
+              <a href="#" class="nav-item nav-link active" onclick="toggleDropdown()">Bilans en ligne</a>
+              <div class="dropdown-content" id="dropdownContent">
+                <a href="/bilans">Rechercher un bilan</a>
+                <a href="#">Publier un bilan</a>
+              </div>
+            </div>
+          </div>
+          
+          
+       <a href="/profile"><h3>{{currentUser.prenom}} {{currentUser.nom}}</h3></a> 
+        &nbsp;
+        <div *ngIf="isLoggedIn">
+        <button (click)="logout()" class="btn btn-warning rounded-pill py-2 px-4">Logout</button>
+        &nbsp;</div>
+    
+    </div>
+</nav>
+<div class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <div class="container py-5">
+        <div class="row justify-content-center py-5">
+            <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+               
+            </div>
+        </div>
+    </div>
+</div>
+</div>

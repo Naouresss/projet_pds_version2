@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Kelly Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  <!-- Favicon -->
+  <link href="/assets/img/favicon.ico" rel="icon">
+  
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Libraries Stylesheet -->
+  <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="/assets/assets/img/favicon.png" rel="icon">
+    <link href="/assets/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="/assets/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="/assets/assets/css/style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: Kelly
+    * Updated: Sep 18 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="/homeclient"><img src="../../assets/logo.PNG"style="width:200px; height: 200px;"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a  href="/homeadmin">Home</a></li>
+          <li><a class="active" href="reunion" >Meeting</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/invite">Guest Account</a></li>
+         <!-- <li><a href="portfolio.html">Portfolio</a></li>-->
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="/profile"><h3>{{currentUser.prenom}} {{currentUser.nom}}</h3></a>       </div>
+        <div *ngIf="isLoggedIn">
+            <button class="cc"(click)="logout()" >Logout</button>
+        </div>
+    </div>
+
+  </header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center" style="height: 100%;">
+    <div class="container d-flex flex-column align-items-center" style="margin-bottom: 120px;">
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="mat-elevation-z8">
+                  <ng-container matColumnDef="ajout">
+                    <button class="btn mx-auto me-md-2" routerLink="/ajout-MEETING" data-toggle="tooltip"
+                      title="ADD Meeting!" style="background-color: #008080; font-weight: bold; width: 12em;left: 1100px;">ADD
+                      MEETING</button>
+                  </ng-container>
+                  <mat-form-field class="custom-filter-field">
+                    <input matInput #inputRef (keyup)="applyFilter(inputRef.value)" placeholder="Search ..."
+                      class="custom-filter-input">
+                  </mat-form-field>
+                  <table mat-table [dataSource]="dataSource" matSort>
+                    <ng-container matColumnDef="sujet">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc"> Subject</p></th>
+                      <td mat-cell *matCellDef="let meeting">{{meeting.sujet}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="dateHeure">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc"> Date and Time</p></th>
+                      <td mat-cell *matCellDef="let meetings">{{meetings.dateHeure | date:'short'}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="titre">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc"> Title</p></th>
+                      <td mat-cell *matCellDef="let meeting">{{meeting.titre}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="organizer">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc"> Organizer</p></th>
+                      <td mat-cell *matCellDef="let meeting">
+                        <ng-container *ngIf="meeting.organizer; else noOrganizer">
+                          {{ (meeting.organizer.prenom ) }}{{ (meeting.organizer.nom ) }}
+                        </ng-container>
+                        <ng-template #noOrganizer>
+                          No Organizer
+                        </ng-template>
+                      </td>
+                    </ng-container>
+                    
+                    <ng-container matColumnDef="participants">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc"> Participants</p></th>
+                      <td mat-cell *matCellDef="let meeting">
+                        <ul class="participants-list" *ngIf="meeting.participants && meeting.participants.length > 0; else noParticipants">
+                          <li *ngFor="let participant of meeting.participants">
+                            <span class="participant-name">{{participant?.nom}}</span>
+                            <span class="participant-name">{{participant?.prenom}}</span>
+                            <span class="participant-role">({{participant?.role}})</span>
+                          </li>
+                        </ul>
+                        <ng-template #noParticipants>
+                          No Participants
+                        </ng-template>
+                      </td>
+                    </ng-container>
+                    
+                    
+                 
+                    <ng-container matColumnDef="update">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc">Update</p></th>
+                      <td mat-cell *matCellDef="let meeting">
+                        <button (click)="updateMeeting(meeting.id)" class="btn btn-floating"
+                          style="background-color: #008080;" title=" UPDATE MEETING!"><i
+                            class="fas fa-magic"></i></button>
+                      </td>
+                    </ng-container>
+                    <ng-container matColumnDef="Delete">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header><p id="cc">Delete</p></th>
+                      <td mat-cell *matCellDef="let meeting">
+                        <button (click)="deleteMeeting(meeting.id)" class="btn btn-floating"
+                          style="background-color: #DC143C;"><i class="fas fa-trash-alt"></i></button>
+                      </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let meeting; columns: displayedColumns;"
+                      (click)="selectedMeeting = meeting" [ngClass]="{ 'selected': meeting === selectedMeeting }">
+                    </tr>
+                  </table>
+                  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </section><!-- End Hero -->
+  
+
+
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/assets/js/main.js"></script>
+
+</body>
+
+</html>

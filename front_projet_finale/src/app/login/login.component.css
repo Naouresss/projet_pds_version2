@@ -1,0 +1,220 @@
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+    font-family: "Times New Roman", Times, serif;
+
+    }
+    button{
+        margin-left: 50px;
+        margin-right: auto;
+        margin-top: 5px;
+       
+        
+    }
+    h3{
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      /* Thème jaune */
+    body {
+        background-color: #fff9db;
+      }
+      
+      .navbar-nav {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .navbar-nav .dropdown {
+        display: inline-block;
+        position: relative;
+      }
+      
+      .navbar-nav .nav-item {
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        min-width: 160px;
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+      
+      .show {
+        display: block;
+      }
+      
+      /* Flèche stylisée */
+      .arrow {
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid #333;
+        position: absolute;
+        top: 18px;
+        right: 10px;
+      }
+      /* Custom Dashboard CSS */
+    
+    /* Adjust the background color of the dashboard */
+    .container-fluid.bg-light {
+      background-color: #f8f9fa; /* Use your desired background color */
+    }
+    
+    /* Style the dashboard widgets */
+    .card {
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .card-text {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    /* Style the footer */
+    .footer {
+      background-color: #343a40; /* Use your desired footer background color */
+      color: #fff; /* Use your desired footer text color */
+    }
+    
+    .footer a {
+      color: #fff;
+    }
+    
+    /* Style the back-to-top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #007bff; /* Use your desired button color */
+      color: #fff; /* Use your desired button text color */
+      padding: 10px;
+      border-radius: 50%;
+    }
+    
+    .back-to-top:hover {
+      background-color: #0056b3; /* Use your desired hover color */
+      color: #fff; /* Use your desired hover text color */
+    }
+    
+    
+    h1.lead {
+      font-weight: bold;
+      margin-bottom: 0;
+      margin-left: 120px; /* Adjust as needed */
+      color: greenyellow;
+      font-size: 50px;
+    }
+    
+      button{
+          margin-left: 50px;
+          margin-right: auto;
+          margin-top: 5px;
+         
+          
+      }
+      .divider:after,
+  .divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+  }
+  .h-custom {
+  height: calc(100% - 73px);
+  }
+  @media (max-width: 450px) {
+  .h-custom {
+  height: 100%;
+  }
+  }
+  /* Ajoutez ces styles à votre fichier de style global ou à votre composant CSS */
+  
+  /* Style général pour toutes les alertes */
+  .alert {
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+    
+    /* Style pour une alerte de succès */
+    .alert-success {
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
+    
+    /* Style pour une alerte d'erreur */
+    .alert-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    
+    /* Style pour une alerte d'avertissement */
+    .alert-warning {
+      color: #856404;
+      background-color: #fff3cd;
+      border-color: #ffeeba;
+    }
+    

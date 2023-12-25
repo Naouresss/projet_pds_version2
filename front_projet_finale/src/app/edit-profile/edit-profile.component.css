@@ -1,0 +1,143 @@
+h3{
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Thème jaune */
+  .form-check-group {
+    margin-right: 20px; /* Espacement entre chaque case à cocher */
+  }
+  
+  /* Style général pour tous les input */
+  .form-check-input {
+    /* Styles de base pour la case à cocher */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Styles lorsque la case à cocher est cochée */
+  .form-check-input:checked {
+    background-color: #f0ad4e; /* Couleur de fond lorsque cochée (thème jaune) */
+    border-color: #f0ad4e; /* Couleur de la bordure lorsque cochée */
+  }
+  
+  /* Styles pour masquer le style d'origine de la case à cocher */
+  .form-check-input[type="checkbox"] {
+    appearance: none;
+  }
+  
+  /* Styles pour la personnalisation de la case à cocher lorsque cochée */
+  .form-check-input[type="checkbox"]:checked::before{
+    content: "\f00c"; /* Code Unicode pour cocher (icône de vérification FontAwesome) */
+    font-family: "Font Awesome 5 Free"; /* Police de caractères pour l'icône */
+    font-weight: 900; /* Poids de la police pour l*/
+  }
+  .navbar-nav {
+    padding: 0;
+    margin: 0;
+  }
+  .btn-secondary{
+    margin-left: 850px;
+  }
+  .navbar-nav .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .navbar-nav .nav-item {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  /* Flèche stylisée */
+  .arrow {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid #333;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+  }
+  h3{
+    color: palevioletred;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    margin-top: 10px;
+   
+}
+.header-social-links{
+    margin-left: 400px;
+}
+button{
+    background-color: #f50057; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.custom-h5 {
+  font-size: 17px; /* Ajustez la taille selon vos préférences */
+  color: #333;
+  font-weight:bold;
+}
